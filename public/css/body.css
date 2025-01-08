@@ -7,16 +7,39 @@
     width: 240px;
     border-radius: 5%;
 }
-
+.big_font {
+    font-size: 65px;
+    font-weight: bold;
+}
 .layout-position {
     margin: 0 20%;
     padding: 3% 3%;
 }
-
+.button_1 {
+    background-color: #eff5f5;
+    color: #252b48;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.button_1:hover {
+    background-color: #eff5f5;
+    color: #252b48;
+    box-shadow: #eff5f5 0px 0px 10px;
+}
+.button_1:active {
+    transform: translateY(8px);
+    box-shadow: #252b48 0px 0px 10px;
+}
 .layout-1 {
     background-color: #eff5f5;
 }
 
+.layout-1,
+.layout-2 {
+    padding: 100px 0;
+}
 .layout-2 {
     background-color: #252b48;
     color: #eff5f5;

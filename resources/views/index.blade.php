@@ -1,3 +1,4 @@
+<script src="{{ asset('js/script.js') }}"></script>
 @extends('layouts/layout')
 {{-- navbar --}}
 <x-navbar />
@@ -10,14 +11,14 @@
         <div class="layout-2 ">
             <div class="layout-position ">
 
-                <div class="row ">
+                {{-- <div class="row ">
                     <div class="col-6 align-self-center ">
                         <h1 class="light-text">Warnet Digital Hub</h1>
 
                         <div class="w-80-costume light-text">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
                             vitae nam iste
-                            repellendus delectus necessitatibus! Omnis quibusdam minus iure nulla. Placeat corrupti
+                            repellendus delectus necessitatibus Omnis quibusdam minus iure nulla. Placeat corrupti
                             saepe ducimus
                             debitis
                             eum ab!
@@ -27,7 +28,33 @@
                     <div class="col-6 d-flex justify-content-end">
                         <img src="{{ asset('img/logo_digital_hub.png') }}" class="img_default " alt="logo warnet">
                     </div>
+                </div> --}}
+
+                <div class="  text-center ">
+                    <span class="light-text  big_font ">WARNET DIGITAL HUB</span>
+
+                    <div class="w-80-costume light-text">
+                        Stasiun bermain 24 jam yang menyediakan fasilitas internet, print dokumen, dan berbagai macam game
+                        online dan offline.
+                    </div>
+
+                    <button type="button" class="btn button_1 my-4" onclick="showForm()" id="btn_showForm">
+                        LOGIN
+                    </button>
+
+
+                    <form action="" class="d-none my-4" id="form_login">
+                        <div class="form-group" id="form_login">
+                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                                placeholder="Enter username">
+                            <input type="password" class="form-control my-3" id="exampleInputPassword1"
+                                placeholder="Password">
+                            <button type="submit" class="btn button_1">Submit</button>
+                        </div>
+                    </form>
                 </div>
+
+
             </div>
         </div>
         {{-- end layout 1 --}}
