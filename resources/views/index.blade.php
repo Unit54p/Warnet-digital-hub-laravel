@@ -6,8 +6,23 @@
 @section('title', 'Warnet Digital Hub')
 {{-- Body --}}
 @section('content')
+<style>
+    .bg-pict {
+            background-image: url("{{ asset('img/dekstop1.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px; /* Atur tinggi sesuai kebutuhan */
+            width: 100%; /* Lebar 100% */
+            display: flex; /* Jika ingin konten di tengah */
+            justify-content: center;
+            align-items: center;
+            color: white; /* Agar teks terlihat */
+        }
+</style>
     <main>
         {{-- layout 1 --}}
+
         <div class="layout-dark bg-pict ">
             <div class="layout-position ">
 
@@ -30,7 +45,7 @@
                     </div>
                 </div> --}}
 
-                <div class="  text-center ">
+                <div class="text-center ">
                     <span class="light-text  big_font ">WARNET DIGITAL HUB</span>
 
                     <div class="w-80-costume light-text">

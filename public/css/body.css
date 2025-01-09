@@ -2,12 +2,7 @@
     width: 50px;
     border-radius: 50%;
 }
-.bg-pict {
-    background-image: url("public/img/dekstop1.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
+
 .img_default {
     width: 240px;
     border-radius: 5%;
@@ -68,8 +63,8 @@
     padding: 150px 0;
 }
 .layout-dark {
-    background-color: #03001c;
-    color: #eff5f5;
+    /* background-color: #03001c;
+    color: #eff5f5; */
 }
 
 .w-50-costume {
