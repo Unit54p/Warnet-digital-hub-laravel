@@ -2,7 +2,12 @@
     width: 50px;
     border-radius: 50%;
 }
-
+.bg-pict {
+    background-image: url("public/img/dekstop1.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
 .img_default {
     width: 240px;
     border-radius: 5%;
@@ -17,7 +22,7 @@
 }
 .button_1 {
     background-color: #eff5f5;
-    color: #252b48;
+    color: #03001c;
     border-radius: 8px;
     padding: 10px 20px;
     font-size: 20px;
@@ -25,45 +30,45 @@
 }
 .button_1:hover {
     background-color: #eff5f5;
-    color: #252b48;
+    color: #03001c;
     box-shadow: #eff5f5 0px 0px 10px;
 }
 .button_1:active {
     transform: translateY(8px);
-    box-shadow: #252b48 0px 0px 10px;
+    box-shadow: #03001c 0px 0px 10px;
 }
 .btn-cost-1 {
-    background-color: #252b48;
+    background-color: #03001c;
     color: #eff5f5;
     border: #eff5f5 solid 1px;
     padding: 10px 20px;
 }
 .btn-cost-1:hover {
     background-color: #eff5f5;
-    color: #252b48;
+    color: #03001c;
     box-shadow: #eff5f5 0px 0px 10px;
 }
 .btn-cost-2 {
     background-color: #eff5f5;
-    color: #252b48;
-    border: #252b48 solid 1px;
+    color: #03001c;
+    border: #03001c solid 1px;
     padding: 10px 20px;
 }
 .btn-cost-2:hover {
-    background-color: #252b48;
+    background-color: #03001c;
     color: #eff5f5;
-    box-shadow: #252b48 0px 0px 10px;
+    box-shadow: #03001c 0px 0px 10px;
 }
-.layout-1 {
+.layout-light {
     background-color: #eff5f5;
 }
 
-.layout-1,
-.layout-2 {
-    padding: 100px 0;
+.layout-light,
+.layout-dark {
+    padding: 150px 0;
 }
-.layout-2 {
-    background-color: #252b48;
+.layout-dark {
+    background-color: #03001c;
     color: #eff5f5;
 }
 
@@ -72,11 +77,11 @@
 }
 
 .body-costum {
-    background-color: #252b48;
+    background-color: #03001c;
     /* margin-top: 60px; */
 }
 .dark-text {
-    color: #252b48;
+    color: #03001c;
 }
 .light-text {
     color: #eff5f5;
@@ -86,12 +91,12 @@
 }
 .card-costume {
     background-color: #eff5f5;
-    color: #252b48;
+    color: #03001c;
     padding: 0;
     margin: 0;
 }
 .border-testing {
-    border: solid 1px #252b48;
+    border: solid 1px #03001c;
 }
 @media (max-width: 768px) {
 }

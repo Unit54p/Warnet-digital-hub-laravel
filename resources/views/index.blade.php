@@ -8,7 +8,7 @@
 @section('content')
     <main>
         {{-- layout 1 --}}
-        <div class="layout-2 ">
+        <div class="layout-dark bg-pict ">
             <div class="layout-position ">
 
                 {{-- <div class="row ">
@@ -59,7 +59,7 @@
         {{-- end layout 1 --}}
 
         {{-- layout 2 --}}
-        <div class="layout-1 ">
+        <div class="layout-light ">
             <div class="layout-position ">
 
                 <div class="row">
@@ -167,7 +167,7 @@
 {{-- end Body --}}
 @section('footer')
     <footer>
-        <div class="footer layout-1  p-0  py-5">
+        <div class="footer layout-light  p-0  py-5">
             <div class="  d-flex justify-content-center ">
                 <div class="dark-text mx-4">
                     <h3>Warnet Digital Hub</h3>

@@ -19,18 +19,22 @@
         /* top: -80px; */
         /* Menyembunyikan navbar di atas layar */
     }
+    .border-cost-nav{
+        border-bottom: 1px solid #f0f0f0;
+        border-radius: 50px
+    }
 </style>
 
 <nav id="navbar" class="">
 
-    <div class="navbar navbar-expand-lg navbar-bg-costum  px-5">
+    <div class="navbar navbar-expand-lg navbar-costum  px-5 border-cost-nav">
 
         {{-- <img src="{{ asset('img/logo_digital_hub.png') }}" class="img_logo mx-3" alt=""> --}}
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
             aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+        <div class="collapse navbar-collapse ps-5" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
                 <li class="nav-item">
                     <a class="nav-link  {{ Request::is('/') ? 'active_bar' : 'nav_costum_style' }} " aria-current="page"
@@ -54,7 +58,7 @@
             </ul>
         </div>
 
-        <div>
+        <div class="pe-5">
             <span id="username">username</span>
             <img src="{{ asset('img/logo_digital_hub.png') }}" class="img_logo  border-animation-1" alt="">
         </div>
