@@ -32,6 +32,28 @@
     transform: translateY(8px);
     box-shadow: #252b48 0px 0px 10px;
 }
+.btn-cost-1 {
+    background-color: #252b48;
+    color: #eff5f5;
+    border: #eff5f5 solid 1px;
+    padding: 10px 20px;
+}
+.btn-cost-1:hover {
+    background-color: #eff5f5;
+    color: #252b48;
+    box-shadow: #eff5f5 0px 0px 10px;
+}
+.btn-cost-2 {
+    background-color: #eff5f5;
+    color: #252b48;
+    border: #252b48 solid 1px;
+    padding: 10px 20px;
+}
+.btn-cost-2:hover {
+    background-color: #252b48;
+    color: #eff5f5;
+    box-shadow: #252b48 0px 0px 10px;
+}
 .layout-1 {
     background-color: #eff5f5;
 }

@@ -38,10 +38,9 @@
                         online dan offline.
                     </div>
 
-                    <button type="button" class="btn button_1 my-4" onclick="showForm()" id="btn_showForm">
-                        LOGIN
+                    <button type="button" class=" btn-cost-1 btn  my-4" onclick="showForm()" id="btn_showForm">
+                        Login
                     </button>
-
 
                     <form action="" class="d-none my-4" id="form_login">
                         <div class="form-group" id="form_login">
@@ -49,7 +48,7 @@
                                 placeholder="Enter username">
                             <input type="password" class="form-control my-3" id="exampleInputPassword1"
                                 placeholder="Password">
-                            <button type="submit" class="btn button_1">Submit</button>
+                            <button type="submit" class="btn  btn-cost-1">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -79,6 +78,7 @@
                             debitis
                             eum ab!
                         </div>
+                        <button class="btn btn-cost-2  mt-3">Check the game!</button>
                     </div>
                 </div>
 
@@ -89,61 +89,79 @@
             </div>
         </div>
         {{-- end layout 2 --}}
-        <div class="my-5">
-            <h1 class="text-center mb-5 light-text ">Our Games</h1>
-            {{-- card game --}}
-            <div class="row d-flex justify-content-center  gap-4">
+        {{-- <div class="my-5">
+            <h1 class="text-center mb-5 light-text ">Our Games</h1> --}}
+        {{-- card game --}}
 
-                <div class="card col-6  p-0" style="width: 14rem;">
-                    <img src={{ asset('img/god_of_war.png') }} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the
-                            card's content.</p>
-                    </div>
-                </div>
+        {{-- @if ($games->isEmpty()) --}}
+        {{-- <p class="text-white text-center fs-5">No game yet...</p> --}}
+        {{-- @else --}}
+        {{-- <div class="row d-flex justify-content-center  gap-4"> --}}
 
-                <div class="card col-6 p-0" style="width: 14rem;">
-                    <img src={{ asset('img/god_of_war.png') }} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                            of the
-                            card's content.</p>
-                    </div>
-                </div>
+        {{-- @foreach ($games as $game) --}}
+        {{-- <div class="card col-6 p-0" style="width: 14rem;">
+                            <!-- Menampilkan gambar dari asset atau nama gambar yang disimpan di kolom 'image' -->
+                            <img src="{{ asset('img/' . $game->image) }}" class="card-img-top" alt="{{ $game->name }}">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $game->name }}</h5> <!-- Menampilkan nama game -->
+                                <p class="card-text">{{ $game->caption }}</p> <!-- Menampilkan deskripsi game -->
+                            </div>
+                        </div> --}}
+        {{-- @endforeach --}}
+        {{-- </div> --}}
 
-                <div class="card col-6 p-0" style="width: 14rem;">
-                    <img src={{ asset('img/god_of_war.png') }} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                    </div>
-                </div>
-
-                <div class="card col-6 p-0" style="width: 14rem;">
-                    <img src={{ asset('img/god_of_war.png') }} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                    </div>
-                </div>
-
-
-                <div class="card col-6 p-0" style="width: 14rem;">
-                    <img src={{ asset('img/god_of_war.png') }} class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-                            card's content.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        {{-- @endif/ --}}
+        {{-- </div> --}}
         {{-- end card game --}}
+
+        <div class="my-5">
+            <h1 class="text-center mb-5 light-text">Our Games</h1>
+            {{-- Jika tidak ada game, tampilkan pesan --}}
+            @if ($games->isEmpty())
+                <p class="text-white text-center fs-5">No game yet...</p>
+            @else
+                {{-- Carousel untuk menampilkan game --}}
+                <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+
+                        @foreach ($games->chunk(5) as $index => $gameChunk)
+                            <div class="carousel-item @if ($index === 0) active @endif">
+                                <div class="row d-flex justify-content-center mx-5">
+                                    @foreach ($gameChunk as $game)
+                                        <div class="col-md-2 col-4">
+                                            <div class="card mx-auto mb-3" style="width: 14rem;">
+                                                <!-- Menampilkan gambar dari asset atau nama gambar yang disimpan di kolom 'image' -->
+                                                <img src="{{ asset('img/' . $game->image) }}" class="card-img-top"
+                                                    alt="{{ $game->name }}">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ $game->name }}</h5>
+                                                    <p class="card-text">{{ $game->caption }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Tombol navigasi -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#gameCarousel"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#gameCarousel"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            @endif
+        </div>
+
+
     </main>
 @endsection
 {{-- end Body --}}

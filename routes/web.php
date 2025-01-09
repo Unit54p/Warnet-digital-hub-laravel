@@ -1,10 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GameController;
 
-Route::get('/', function () {
-    return view('index');
-});
+// Rute untuk halaman index menggunakan controller
+Route::get('/', [GameController::class, 'index']);
+
+// Rute untuk halaman lain
 Route::get('/store', function () {
     return view('store');
 });
