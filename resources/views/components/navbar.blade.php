@@ -21,7 +21,7 @@
     }
     .border-cost-nav{
         border-bottom: 1px solid #f0f0f0;
-        border-radius: 50px
+        border-radius: 0 0 20px 20px;
     }
 </style>
 
@@ -35,7 +35,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse ps-5" id="navbarTogglerDemo02">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-2">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-4">
                 <li class="nav-item">
                     <a class="nav-link  {{ Request::is('/') ? 'active_bar' : 'nav_costum_style' }} " aria-current="page"
                         href="/">Home</a>

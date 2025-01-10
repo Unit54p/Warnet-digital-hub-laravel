@@ -11,43 +11,65 @@
     font-size: 65px;
     font-weight: bold;
 }
+
 .layout-position {
     margin: 0 20%;
-    padding: 3% 3%;
 }
-.button_1 {
+.lay_80 {
+    height: 80vh;
+}
+.lay_50 {
+    height: 50vh;
+}
+.btn-cost-submit {
     background-color: #eff5f5;
     color: #03001c;
-    border-radius: 8px;
     padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
+    border: none;
 }
-.button_1:hover {
+.btn-cost-submit:hover {
+    box-shadow: #eff5f5 0 0 10px;
+}
+.input_cost_light{
+    background-color: #eff5f5;
+    color: #03001c;
+    border-radius: 0;
+    border: none;
+}
+.input_cost_light:focus {
+    box-shadow: #eff5f5 0 0 10px;
+}
+.btn-cost-submit:active {
+    transform: translateY(8px);
+    box-shadow: #eff5f5 0px 0px 10px;
+ }
+
+.btn_dark {
+    background-color: #03001c;
+    color: #eff5f5;
+    padding: 10px 20px;
+    border: 1px solid #eff5f5;
+
+}
+.btn_dark:hover {
     background-color: #eff5f5;
     color: #03001c;
     box-shadow: #eff5f5 0px 0px 10px;
 }
-.button_1:active {
+.btn_dark:active {
     transform: translateY(8px);
     box-shadow: #03001c 0px 0px 10px;
 }
-.btn-cost-1 {
-    background-color: #03001c;
-    color: #eff5f5;
-    border: #eff5f5 solid 1px;
+.btn_dark,
+.btn-cost-2,
+.btn-cost-submit {
+    transition: 0.15s ease;
     padding: 10px 20px;
-}
-.btn-cost-1:hover {
-    background-color: #eff5f5;
-    color: #03001c;
-    box-shadow: #eff5f5 0px 0px 10px;
 }
 .btn-cost-2 {
     background-color: #eff5f5;
     color: #03001c;
     border: #03001c solid 1px;
-    padding: 10px 20px;
 }
 .btn-cost-2:hover {
     background-color: #03001c;
@@ -56,15 +78,21 @@
 }
 .layout-light {
     background-color: #eff5f5;
+    color: #03001c;
+}
+.layout-dark {
+    background-color: #03001c;
+    color: #eff5f5;
 }
 
 .layout-light,
 .layout-dark {
     padding: 150px 0;
 }
+
 .layout-dark {
-    /* background-color: #03001c;
-    color: #eff5f5; */
+    background-color: #03001c;
+    color: #eff5f5;
 }
 
 .w-50-costume {
@@ -90,8 +118,8 @@
     padding: 0;
     margin: 0;
 }
-.border-testing {
-    border: solid 1px #03001c;
+.border_test {
+    border: solid 1px red;
 }
 @media (max-width: 768px) {
 }
