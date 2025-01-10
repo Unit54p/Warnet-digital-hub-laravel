@@ -1,11 +1,11 @@
-.navbar-bg-costum {
-    background-color: #252b48;
+.navbar-costum {
+    background-color: #03001C;
     color: #eff5f5;
     z-index: 1030;
 }
 .active_bar {
     background-color: #eff5f5;
-    color: #252b48;
+    color: #03001C;
     border-radius: 8px;
 }
 

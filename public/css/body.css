@@ -11,59 +11,87 @@
     font-size: 65px;
     font-weight: bold;
 }
+
 .layout-position {
     margin: 0 20%;
-    padding: 3% 3%;
 }
-.button_1 {
+.lay_80 {
+    height: 80vh;
+}
+.lay_50 {
+    height: 50vh;
+}
+.btn-cost-submit {
     background-color: #eff5f5;
-    color: #252b48;
-    border-radius: 8px;
+    color: #03001c;
     padding: 10px 20px;
-    font-size: 20px;
-    font-weight: bold;
+    border: none;
 }
-.button_1:hover {
+.btn-cost-submit:hover {
+    box-shadow: #eff5f5 0 0 10px;
+}
+.input_cost_light{
     background-color: #eff5f5;
-    color: #252b48;
-    box-shadow: #eff5f5 0px 0px 10px;
+    color: #03001c;
+    border-radius: 0;
+    border: none;
 }
-.button_1:active {
+.input_cost_light:focus {
+    box-shadow: #eff5f5 0 0 10px;
+}
+.btn-cost-submit:active {
     transform: translateY(8px);
-    box-shadow: #252b48 0px 0px 10px;
-}
-.btn-cost-1 {
-    background-color: #252b48;
-    color: #eff5f5;
-    border: #eff5f5 solid 1px;
-    padding: 10px 20px;
-}
-.btn-cost-1:hover {
-    background-color: #eff5f5;
-    color: #252b48;
     box-shadow: #eff5f5 0px 0px 10px;
+ }
+
+.btn_dark {
+    background-color: #03001c;
+    color: #eff5f5;
+    padding: 10px 20px;
+    border: 1px solid #eff5f5;
+
+}
+.btn_dark:hover {
+    background-color: #eff5f5;
+    color: #03001c;
+    box-shadow: #eff5f5 0px 0px 10px;
+}
+.btn_dark:active {
+    transform: translateY(8px);
+    box-shadow: #03001c 0px 0px 10px;
+}
+.btn_dark,
+.btn-cost-2,
+.btn-cost-submit {
+    transition: 0.15s ease;
+    padding: 10px 20px;
 }
 .btn-cost-2 {
     background-color: #eff5f5;
-    color: #252b48;
-    border: #252b48 solid 1px;
-    padding: 10px 20px;
+    color: #03001c;
+    border: #03001c solid 1px;
 }
 .btn-cost-2:hover {
-    background-color: #252b48;
+    background-color: #03001c;
     color: #eff5f5;
-    box-shadow: #252b48 0px 0px 10px;
+    box-shadow: #03001c 0px 0px 10px;
 }
-.layout-1 {
+.layout-light {
     background-color: #eff5f5;
+    color: #03001c;
+}
+.layout-dark {
+    background-color: #03001c;
+    color: #eff5f5;
 }
 
-.layout-1,
-.layout-2 {
-    padding: 100px 0;
+.layout-light,
+.layout-dark {
+    padding: 150px 0;
 }
-.layout-2 {
-    background-color: #252b48;
+
+.layout-dark {
+    background-color: #03001c;
     color: #eff5f5;
 }
 
@@ -72,11 +100,11 @@
 }
 
 .body-costum {
-    background-color: #252b48;
+    background-color: #03001c;
     /* margin-top: 60px; */
 }
 .dark-text {
-    color: #252b48;
+    color: #03001c;
 }
 .light-text {
     color: #eff5f5;
@@ -86,12 +114,12 @@
 }
 .card-costume {
     background-color: #eff5f5;
-    color: #252b48;
+    color: #03001c;
     padding: 0;
     margin: 0;
 }
-.border-testing {
-    border: solid 1px #252b48;
+.border_test {
+    border: solid 1px red;
 }
 @media (max-width: 768px) {
 }

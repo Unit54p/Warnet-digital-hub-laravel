@@ -6,9 +6,32 @@
 @section('title', 'Warnet Digital Hub')
 {{-- Body --}}
 @section('content')
+    <style>
+        .bg-pict {
+            background-image: url("{{ asset('img/dekstop1.png') }}");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 500px;
+            /* Atur tinggi sesuai kebutuhan */
+            width: 100%;
+            /* Lebar 100% */
+            display: flex;
+            /* Jika ingin konten di tengah */
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* Agar teks terlihat */
+        }
+
+        .hero_section {
+            height: 80vh;
+        }
+    </style>
     <main>
         {{-- layout 1 --}}
-        <div class="layout-2 ">
+
+        <div class="layout-dark hero_section bg-pict ">
             <div class="layout-position ">
 
                 {{-- <div class="row ">
@@ -30,62 +53,78 @@
                     </div>
                 </div> --}}
 
-                <div class="  text-center ">
+                <div class="text-center ">
                     <span class="light-text  big_font ">WARNET DIGITAL HUB</span>
 
                     <div class="w-80-costume light-text">
                         Stasiun bermain 24 jam yang menyediakan fasilitas internet, print dokumen, dan berbagai macam game
                         online dan offline.
                     </div>
-
-                    <button type="button" class=" btn-cost-1 btn  my-4" onclick="showForm()" id="btn_showForm">
-                        Login
-                    </button>
-
+                    <!-- Form Login -->
                     <form action="" class="d-none my-4" id="form_login">
-                        <div class="form-group" id="form_login">
-                            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                        <div class="form-group d-flex justify-content-center align-items-center flex-column">
+                            <input type="text" class="form-control w-50 input_cost_light" id="exampleInputEmail1"
                                 placeholder="Enter username">
-                            <input type="password" class="form-control my-3" id="exampleInputPassword1"
-                                placeholder="Password">
-                            <button type="submit" class="btn  btn-cost-1">Submit</button>
+                            <input type="password" class="form-control my-3 w-50 input_cost_light"
+                                id="exampleInputPassword1" placeholder="Password">
+                            <div class="w-50 d-flex justify-content-center gap-4">
+
+                                <button type="button" class=" btn_dark w-50" onclick="showFormSignIn()">Sign
+                                    In</button>
+                                <button type="submit" class="btn-cost-submit   w-50">Submit</button>
+                            </div>
                         </div>
                     </form>
+
+                    <!-- Form Sign In -->
+                    <form action="" class="d-none my-4" id="form_signin">
+                        <div class="form-group d-flex justify-content-center align-items-center flex-column">
+                            <input type="text" class="form-control w-50 input_cost_light" id="usernameSign"
+                                placeholder="Enter username">
+                            <input type="number" class="form-control my-3 w-50 input_cost_light" id="phone_num"
+                                placeholder="Phone Number">
+                            <input type="password" class="form-control w-50 input_cost_light" id="paswordSign"
+                                placeholder="Password">
+
+                            <div class="w-50 d-flex justify-content-center mt-3 gap-4">
+                                <button type="button" class=" btn_dark w-50" onclick="showForm()">Login</button>
+                                <button type="submit" class=" btn-cost-submit w-50">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Buttons to Show Forms -->
+                    <div class="text-center mt-4 d-flex justify-content-center gap-3">
+                        <button type="button" class="px-5 btn_dark" onclick="showForm()" id="btn_showForm">Login</button>
+                        <button type="button" class="px-5 btn_dark" onclick="showFormSignIn()" id="btn_showFormSignIn">Sign
+                            In</button>
+                    </div>
                 </div>
-
-
             </div>
         </div>
         {{-- end layout 1 --}}
 
         {{-- layout 2 --}}
-        <div class="layout-1 ">
-            <div class="layout-position ">
+        <div class="layout-light lay_50 border_test d-flex align-items-center">
+            <div class="layout-position border_test row">
 
-                <div class="row">
-                    <div class="col-6 d-flex justify-content-start">
-                        <img src="{{ asset('img\game_logo.svg') }}" class="img_default " alt="logo_game">
-                    </div>
-
-                    <div class="col-6 align-self-center dark-text">
-                        <h1>Play Your Favorite Game!</h1>
-
-                        <div class="w-80-costume dark-text ">
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
-                            vitae nam iste
-                            repellendus delectus necessitatibus! Omnis quibusdam minus iure nulla. Placeat corrupti
-                            saepe ducimus
-                            debitis
-                            eum ab!
-                        </div>
-                        <button class="btn btn-cost-2  mt-3">Check the game!</button>
-                    </div>
+                <div class="col-6 d-flex justify-content-center border_test">
+                    <img src="{{ asset('img\game_logo.svg') }}" class="img_default " alt="logo_game">
                 </div>
 
-                <div class="">
-                    <div></div>
-                </div>
+                <div class="col-6 align-self-center dark-text border_test">
+                    <h1>Play Your Favorite Game!</h1>
 
+                    <div class="w-80-costume dark-text border_test">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
+                        vitae nam iste
+                        repellendus delectus necessitatibus! Omnis quibusdam minus iure nulla. Placeat corrupti
+                        saepe ducimus
+                        debitis
+                        eum ab!
+                    </div>
+                    <button class="btn btn-cost-2  mt-3">Check the game!</button>
+                </div>
             </div>
         </div>
         {{-- end layout 2 --}}
@@ -167,7 +206,7 @@
 {{-- end Body --}}
 @section('footer')
     <footer>
-        <div class="footer layout-1  p-0  py-5">
+        <div class="footer layout-light  p-0  py-5">
             <div class="  d-flex justify-content-center ">
                 <div class="dark-text mx-4">
                     <h3>Warnet Digital Hub</h3>
