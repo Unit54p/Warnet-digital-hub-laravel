@@ -21,6 +21,9 @@
 .lay_50 {
     height: 50vh;
 }
+.lay_25 {
+    height: 25vh;
+}
 .btn-cost-submit {
     background-color: #eff5f5;
     color: #03001c;
