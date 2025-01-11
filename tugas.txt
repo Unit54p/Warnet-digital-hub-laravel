@@ -1,0 +1,1 @@
+rubah warna card di game view

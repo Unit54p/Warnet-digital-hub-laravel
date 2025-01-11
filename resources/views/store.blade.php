@@ -9,12 +9,12 @@
 {{-- Body --}}
 @section('content')
     <main>
-        <div class="layout_light">
+        <div class="layout_dark ">
             <div class="layout_position">
-                <table>
+                <table class=" mt-4">
                     <tr>
                         <td>
-                            <H1>Games</H1>
+                            <H1 class="light_text">Games</H1>
                         </td>
                     </tr>
                     <tr>
@@ -38,6 +38,62 @@
                 </table>
             </div>
         </div>
+
+        <div class="mb-5 mt-4 d-flex justify-content-center flex-column">
+            {{-- Jika tidak ada game, tampilkan pesan --}}
+            @if ($games->isEmpty())
+                <p class="text-white text-center fs-5">No game yet...</p>
+            @else
+                {{-- Carousel untuk menampilkan game --}}
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+                    <!-- Carousel Indicators -->
+                    <div class="carousel-indicators">
+                        @foreach ($games->chunk(5) as $index => $gameChunk)
+                            <button type="button" data-bs-target="#carouselExampleCaptions"
+                                data-bs-slide-to="{{ $index }}" class="{{ $index === 0 ? 'active' : '' }}"
+                                aria-label="Slide {{ $index + 1 }}"></button>
+                        @endforeach
+                    </div>
+
+                    <!-- Carousel Items -->
+                    <div class="carousel-inner">
+                        @foreach ($games->chunk(5) as $index => $gameChunk)
+                            <div class="carousel-item {{ $index === 0 ? 'active' : '' }}">
+                                <div class="row d-flex justify-content-center mx-5">
+                                    @foreach ($gameChunk as $game)
+                                        <div class="col-md-2 col-4">
+                                            <div class="card mx-auto mb-3" style="width: 14rem;">
+                                                <!-- Menampilkan gambar dari asset atau nama gambar yang disimpan di kolom 'image' -->
+                                                <img src="{{ asset('img/' . $game->image) }}" class="card-img-top"
+                                                    alt="{{ $game->name }}">
+                                                <div class="card-body">
+                                                    <h5 class="card-title">{{ $game->name }}</h5>
+                                                    <p class="card-text">{{ $game->caption }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    @endforeach
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+
+                    <!-- Tombol navigasi -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            @endif
+        </div>
+
+
     </main>
 @endsection
 {{-- end Body --}}

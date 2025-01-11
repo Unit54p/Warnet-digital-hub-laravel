@@ -15,4 +15,12 @@ class GameController extends Controller
         // Mengirimkan data game ke view 'index.blade.php'
         return view('index', compact('games'));  // Pastikan nama view-nya adalah 'index'
     }
+    public function store()
+    {
+        // Mengambil semua data game dari database
+        $games = Games::all();
+
+        // Mengirimkan data game ke view 'index.blade.php'
+        return view('store', compact('games'));  // Pastikan nama view-nya adalah 'index'
+    }
 }
