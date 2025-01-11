@@ -31,8 +31,8 @@
     <main>
         {{-- layout 1 --}}
 
-        <div class="layout-dark hero_section bg-pict ">
-            <div class="layout-position ">
+        <div class="layout_dark hero_section bg-pict ">
+            <div class="layout_position ">
 
                 {{-- <div class="row ">
                     <div class="col-6 align-self-center ">
@@ -105,17 +105,17 @@
         {{-- end layout 1 --}}
 
         {{-- layout 2 --}}
-        <div class="layout-light lay_50 border_test d-flex align-items-center">
-            <div class="layout-position border_test row">
+        <div class="layout_light lay_50  d-flex align-items-center">
+            <div class="layout_position  row">
 
-                <div class="col-6 d-flex justify-content-center border_test">
+                <div class="col-6 d-flex justify-content-center ">
                     <img src="{{ asset('img\game_logo.svg') }}" class="img_default " alt="logo_game">
                 </div>
 
-                <div class="col-6 align-self-center dark-text border_test">
+                <div class="col-6 align-self-center dark-text ">
                     <h1>Play Your Favorite Game!</h1>
 
-                    <div class="w-80-costume dark-text border_test">
+                    <div class="w-80-costume dark-text ">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
                         vitae nam iste
                         repellendus delectus necessitatibus! Omnis quibusdam minus iure nulla. Placeat corrupti
@@ -153,7 +153,7 @@
         {{-- </div> --}}
         {{-- end card game --}}
 
-        <div class="my-5">
+        <div class="my-5 lay_50 d-flex justify-content-center flex-column">
             <h1 class="text-center mb-5 light-text">Our Games</h1>
             {{-- Jika tidak ada game, tampilkan pesan --}}
             @if ($games->isEmpty())
@@ -205,30 +205,5 @@
 @endsection
 {{-- end Body --}}
 @section('footer')
-    <footer>
-        <div class="footer layout-light  p-0  py-5">
-            <div class="  d-flex justify-content-center ">
-                <div class="dark-text mx-4">
-                    <h3>Warnet Digital Hub</h3>
-                    <p>Lorem ipsum dolor sit amet <br>consectetur adipisicing elit. <br>Quisquam, quod.</p>
-                </div>
-                <div class="dark-text mx-4">
-                    <h3>Services</h3>
-                    <ul>
-                        <li>Play Game</li>
-                        <li>Print Document</li>
-                        <li>Internet</li>
-                    </ul>
-                </div>
-                <div class="dark-text mx-4">
-                    <h3>Follow Us</h3>
-                    <ul>
-                        <li>Facebook</li>
-                        <li>Instagram</li>
-                        <li>Twitter</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <x-footer />
 @endsection
