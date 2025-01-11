@@ -1,128 +1,169 @@
-.img_logo {
-    width: 50px;
-    border-radius: 50%;
-}
+    html,
+    body {
+        height: 100%;
+        /* Pastikan HTML dan body memenuhi tinggi viewport */
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+    }
 
-.img_default {
-    width: 240px;
-    border-radius: 5%;
-}
-.big_font {
-    font-size: 65px;
-    font-weight: bold;
-}
+    main {
+        flex: 1;
+        /* Konten utama akan mengambil ruang kosong */
+    }
 
-.layout-position {
-    margin: 0 20%;
-}
-.lay_80 {
-    height: 80vh;
-}
-.lay_50 {
-    height: 50vh;
-}
-.lay_25 {
-    height: 25vh;
-}
-.btn-cost-submit {
-    background-color: #eff5f5;
-    color: #03001c;
-    padding: 10px 20px;
-    border: none;
-}
-.btn-cost-submit:hover {
-    box-shadow: #eff5f5 0 0 10px;
-}
-.input_cost_light{
-    background-color: #eff5f5;
-    color: #03001c;
-    border-radius: 0;
-    border: none;
-}
-.input_cost_light:focus {
-    box-shadow: #eff5f5 0 0 10px;
-}
-.btn-cost-submit:active {
-    transform: translateY(8px);
-    box-shadow: #eff5f5 0px 0px 10px;
- }
+    footer {
+        background-color: #f8f9fa;
+        /* Warna footer */
+        padding: 10px 0;
+        /* Tambahkan padding agar lebih terlihat */
+        text-align: center;
+        /* Pusatkan isi footer */
+    }
 
-.btn_dark {
-    background-color: #03001c;
-    color: #eff5f5;
-    padding: 10px 20px;
-    border: 1px solid #eff5f5;
+    .img_logo {
+        width: 50px;
+        border-radius: 50%;
+    }
 
-}
-.btn_dark:hover {
-    background-color: #eff5f5;
-    color: #03001c;
-    box-shadow: #eff5f5 0px 0px 10px;
-}
-.btn_dark:active {
-    transform: translateY(8px);
-    box-shadow: #03001c 0px 0px 10px;
-}
-.btn_dark,
-.btn-cost-2,
-.btn-cost-submit {
-    transition: 0.15s ease;
-    padding: 10px 20px;
-}
-.btn-cost-2 {
-    background-color: #eff5f5;
-    color: #03001c;
-    border: #03001c solid 1px;
-}
-.btn-cost-2:hover {
-    background-color: #03001c;
-    color: #eff5f5;
-    box-shadow: #03001c 0px 0px 10px;
-}
-.layout-light {
-    background-color: #eff5f5;
-    color: #03001c;
-}
-.layout-dark {
-    background-color: #03001c;
-    color: #eff5f5;
-}
+    .img_default {
+        width: 240px;
+        border-radius: 5%;
+    }
 
-.layout-light,
-.layout-dark {
-    padding: 150px 0;
-}
+    .big_font {
+        font-size: 65px;
+        font-weight: bold;
+    }
 
-.layout-dark {
-    background-color: #03001c;
-    color: #eff5f5;
-}
+    .layout_position {
+        margin: 0 20%;
+    }
 
-.w-50-costume {
-    width: 80%;
-}
+    .lay_80 {
+        height: 80vh;
+    }
 
-.body-costum {
-    background-color: #03001c;
-    /* margin-top: 60px; */
-}
-.dark-text {
-    color: #03001c;
-}
-.light-text {
-    color: #eff5f5;
-}
-.img-card-costume {
-    width: 60px;
-}
-.card-costume {
-    background-color: #eff5f5;
-    color: #03001c;
-    padding: 0;
-    margin: 0;
-}
-.border_test {
-    border: solid 1px red;
-}
-@media (max-width: 768px) {
-}
+    .lay_50 {
+        height: 50vh;
+    }
+
+    .lay_25 {
+        height: 25vh;
+    }
+
+    .btn-cost-submit {
+        background-color: #eff5f5;
+        color: #03001c;
+        padding: 10px 20px;
+        border: none;
+    }
+
+    .btn-cost-submit:hover {
+        box-shadow: #eff5f5 0 0 10px;
+    }
+
+    .input_cost_light {
+        background-color: #eff5f5;
+        color: #03001c;
+        border-radius: 0;
+        border: none;
+    }
+
+    .input_cost_light:focus {
+        box-shadow: #eff5f5 0 0 10px;
+    }
+
+    .btn-cost-submit:active {
+        transform: translateY(8px);
+        box-shadow: #eff5f5 0px 0px 10px;
+    }
+
+    .btn_dark {
+        background-color: #03001c;
+        color: #eff5f5;
+        padding: 10px 20px;
+        border: 1px solid #eff5f5;
+
+    }
+
+    .btn_dark:hover {
+        background-color: #eff5f5;
+        color: #03001c;
+        box-shadow: #eff5f5 0px 0px 10px;
+    }
+
+    .btn_dark:active {
+        transform: translateY(8px);
+        box-shadow: #03001c 0px 0px 10px;
+    }
+
+    .btn_dark,
+    .btn-cost-2,
+    .btn-cost-submit {
+        transition: 0.15s ease;
+        padding: 10px 20px;
+    }
+
+    .btn-cost-2 {
+        background-color: #eff5f5;
+        color: #03001c;
+        border: #03001c solid 1px;
+    }
+
+    .btn-cost-2:hover {
+        background-color: #03001c;
+        color: #eff5f5;
+        box-shadow: #03001c 0px 0px 10px;
+    }
+
+    .layout_light {
+        background-color: #eff5f5;
+        color: #03001c;
+    }
+
+    .layout_dark {
+        background-color: #03001c;
+        color: #eff5f5;
+    }
+
+  
+
+    .layout_dark {
+        background-color: #03001c;
+        color: #eff5f5;
+    }
+
+    .w-50-costume {
+        width: 80%;
+    }
+
+    .body-costum {
+        background-color: #03001c;
+        /* margin-top: 60px; */
+    }
+
+    .dark-text {
+        color: #03001c;
+    }
+
+    .light-text {
+        color: #eff5f5;
+    }
+
+    .img-card-costume {
+        width: 60px;
+    }
+
+    .card-costume {
+        background-color: #eff5f5;
+        color: #03001c;
+        padding: 0;
+        margin: 0;
+    }
+
+    .border_test {
+        border: solid 1px red;
+    }
+
+    @media (max-width: 768px) {}

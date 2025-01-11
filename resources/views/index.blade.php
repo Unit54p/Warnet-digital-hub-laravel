@@ -31,8 +31,8 @@
     <main>
         {{-- layout 1 --}}
 
-        <div class="layout-dark hero_section bg-pict ">
-            <div class="layout-position ">
+        <div class="layout_dark hero_section bg-pict ">
+            <div class="layout_position ">
 
                 {{-- <div class="row ">
                     <div class="col-6 align-self-center ">
@@ -105,8 +105,8 @@
         {{-- end layout 1 --}}
 
         {{-- layout 2 --}}
-        <div class="layout-light lay_50  d-flex align-items-center">
-            <div class="layout-position  row">
+        <div class="layout_light lay_50  d-flex align-items-center">
+            <div class="layout_position  row">
 
                 <div class="col-6 d-flex justify-content-center ">
                     <img src="{{ asset('img\game_logo.svg') }}" class="img_default " alt="logo_game">
@@ -205,5 +205,5 @@
 @endsection
 {{-- end Body --}}
 @section('footer')
-   <x-footer />
+    <x-footer />
 @endsection
