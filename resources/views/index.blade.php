@@ -105,17 +105,17 @@
         {{-- end layout 1 --}}
 
         {{-- layout 2 --}}
-        <div class="layout-light lay_50 border_test d-flex align-items-center">
-            <div class="layout-position border_test row">
+        <div class="layout-light lay_50  d-flex align-items-center">
+            <div class="layout-position  row">
 
-                <div class="col-6 d-flex justify-content-center border_test">
+                <div class="col-6 d-flex justify-content-center ">
                     <img src="{{ asset('img\game_logo.svg') }}" class="img_default " alt="logo_game">
                 </div>
 
-                <div class="col-6 align-self-center dark-text border_test">
+                <div class="col-6 align-self-center dark-text ">
                     <h1>Play Your Favorite Game!</h1>
 
-                    <div class="w-80-costume dark-text border_test">
+                    <div class="w-80-costume dark-text ">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
                         vitae nam iste
                         repellendus delectus necessitatibus! Omnis quibusdam minus iure nulla. Placeat corrupti
