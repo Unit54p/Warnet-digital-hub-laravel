@@ -127,7 +127,7 @@
         color: #eff5f5;
     }
 
-  
+
 
     .layout_dark {
         background-color: #03001c;
@@ -143,11 +143,11 @@
         /* margin-top: 60px; */
     }
 
-    .dark-text {
+    .dark_text {
         color: #03001c;
     }
 
-    .light-text {
+    .light_text {
         color: #eff5f5;
     }
 

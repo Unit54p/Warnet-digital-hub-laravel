@@ -36,9 +36,9 @@
 
                 {{-- <div class="row ">
                     <div class="col-6 align-self-center ">
-                        <h1 class="light-text">Warnet Digital Hub</h1>
+                        <h1 class="light_text">Warnet Digital Hub</h1>
 
-                        <div class="w-80-costume light-text">
+                        <div class="w-80-costume light_text">
                             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
                             vitae nam iste
                             repellendus delectus necessitatibus Omnis quibusdam minus iure nulla. Placeat corrupti
@@ -54,9 +54,9 @@
                 </div> --}}
 
                 <div class="text-center ">
-                    <span class="light-text  big_font ">WARNET DIGITAL HUB</span>
+                    <span class="light_text  big_font ">WARNET DIGITAL HUB</span>
 
-                    <div class="w-80-costume light-text">
+                    <div class="w-80-costume light_text">
                         Stasiun bermain 24 jam yang menyediakan fasilitas internet, print dokumen, dan berbagai macam game
                         online dan offline.
                     </div>
@@ -112,10 +112,10 @@
                     <img src="{{ asset('img\game_logo.svg') }}" class="img_default " alt="logo_game">
                 </div>
 
-                <div class="col-6 align-self-center dark-text ">
+                <div class="col-6 align-self-center dark_text ">
                     <h1>Play Your Favorite Game!</h1>
 
-                    <div class="w-80-costume dark-text ">
+                    <div class="w-80-costume dark_text ">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatum natus eos eligendi
                         vitae nam iste
                         repellendus delectus necessitatibus! Omnis quibusdam minus iure nulla. Placeat corrupti
@@ -129,7 +129,7 @@
         </div>
         {{-- end layout 2 --}}
         {{-- <div class="my-5">
-            <h1 class="text-center mb-5 light-text ">Our Games</h1> --}}
+            <h1 class="text-center mb-5 light_text ">Our Games</h1> --}}
         {{-- card game --}}
 
         {{-- @if ($games->isEmpty()) --}}
@@ -154,20 +154,20 @@
         {{-- end card game --}}
 
         <div class="my-5 lay_50 d-flex justify-content-center flex-column">
-            <h1 class="text-center mb-5 light-text">Our Games</h1>
+            <h1 class="text-center mb-5 light_text">Our Games</h1>
             {{-- Jika tidak ada game, tampilkan pesan --}}
             @if ($games->isEmpty())
                 <p class="text-white text-center fs-5">No game yet...</p>
             @else
                 {{-- Carousel untuk menampilkan game --}}
-                <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="gameCarousel" class="carousel slide">
                     <div class="carousel-inner">
 
                         @foreach ($games->chunk(5) as $index => $gameChunk)
                             <div class="carousel-item @if ($index === 0) active @endif">
                                 <div class="row d-flex justify-content-center mx-5">
                                     @foreach ($gameChunk as $game)
-                                        <div class="col-md-2 col-4">
+                                        <div class="col-md-6 col-lg-2 border_test">
                                             <div class="card mx-auto mb-3" style="width: 14rem;">
                                                 <!-- Menampilkan gambar dari asset atau nama gambar yang disimpan di kolom 'image' -->
                                                 <img src="{{ asset('img/' . $game->image) }}" class="card-img-top"

@@ -11,6 +11,7 @@
         integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous">
     </script>
     <link rel="stylesheet" href="{{ asset('css/body.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/bs_costum.css') }}">
 
 
     <title>

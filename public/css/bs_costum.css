@@ -1,0 +1,36 @@
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Warna panah (gelap transparan) */
+    border-radius: 50%;
+    /* Membuat bentuk lingkaran */
+    padding: 10px;
+    /* Menambah ukuran panah */
+}
+
+/* Mengganti ikon default dengan tanda panah kustom */
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    /* Lebar tanda panah */
+    height: 10px;
+    /* Tinggi tanda panah */
+    border: solid white;
+    /* Warna dan ketebalan panah */
+    border-width: 4px 6px 6px 4px;
+    /* Menentukan ketebalan panah */
+}
+
+/* Panah kiri */
+.carousel-control-prev-icon::before {
+    transform: rotate(135deg);
+    /* Rotasi untuk tanda panah kiri */
+}
+
+/* Panah kanan */
+.carousel-control-next-icon::before {
+    transform: rotate(-45deg);
+    /* Rotasi untuk tanda panah kanan */
+}
