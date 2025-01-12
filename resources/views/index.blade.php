@@ -160,14 +160,14 @@
                 <p class="text-white text-center fs-5">No game yet...</p>
             @else
                 {{-- Carousel untuk menampilkan game --}}
-                <div id="gameCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div id="gameCarousel" class="carousel slide">
                     <div class="carousel-inner">
 
                         @foreach ($games->chunk(5) as $index => $gameChunk)
                             <div class="carousel-item @if ($index === 0) active @endif">
                                 <div class="row d-flex justify-content-center mx-5">
                                     @foreach ($gameChunk as $game)
-                                        <div class="col-md-2 col-4">
+                                        <div class="col-md-6 col-lg-2 border_test">
                                             <div class="card mx-auto mb-3" style="width: 14rem;">
                                                 <!-- Menampilkan gambar dari asset atau nama gambar yang disimpan di kolom 'image' -->
                                                 <img src="{{ asset('img/' . $game->image) }}" class="card-img-top"
